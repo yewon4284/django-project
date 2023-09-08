@@ -26,10 +26,8 @@ env = environ.Env(
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 environ.Env.read_env(
-    env_file = os.path.join(BASE_DIR, '.env')
+    env_file=os.path.join(BASE_DIR, '.env')
 )
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -55,6 +53,7 @@ INSTALLED_APPS = [
     'bootstrap4',
     'accountapp',
     'profileapp',
+    'articleapp',
 ]
 
 MIDDLEWARE = [
@@ -134,11 +133,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
